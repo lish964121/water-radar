@@ -1,0 +1,12 @@
+name: Test Push
+   on:
+     workflow_dispatch:
+   jobs:
+     push:
+       runs-on: ubuntu-latest
+       steps:
+         - name: Send test
+           run: |
+             curl -X POST "https://sctapi.ftqq.com/${{ secrets.SENDKEY }}.send" \
+               --data-urlencode "title=GitHub自动推送测试" \
+               --data-urlencode "desp=收到这条说明GitHub能自动给你发消息了，下一步就去抓水利信息！"
