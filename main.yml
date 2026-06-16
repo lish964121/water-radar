@@ -1,7 +1,0 @@
-name: Test Push
-on: workflow_dispatch
-jobs:
-  push:
-    runs-on: ubuntu-latest
-    steps:
-      - run: curl -s "https://sctapi.ftqq.com/${{ secrets.SENDKEY }}.send?title=GitHubTest&desp=ok"
